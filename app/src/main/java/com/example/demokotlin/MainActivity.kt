@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
 //        val binding = ActivityMainBinding.inflate(layoutInflater)
+//        Something
         binding.login.setOnClickListener {
             when (binding.password.transformationMethod) {
                 PasswordTransformationMethod.getInstance() -> {
