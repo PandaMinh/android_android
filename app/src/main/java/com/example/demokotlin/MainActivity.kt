@@ -13,17 +13,22 @@ class MainActivity : AppCompatActivity() {
         val binding: ActivityMainBinding =
             DataBindingUtil.setContentView(this, R.layout.activity_main)
 //        val binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.login.setOnClickListener {
-            when (binding.password.transformationMethod) {
-                PasswordTransformationMethod.getInstance() -> {
-                    binding.password.transformationMethod =
-                        HideReturnsTransformationMethod.getInstance()
-                }
-                HideReturnsTransformationMethod.getInstance() -> {
-                    binding.password.transformationMethod =
-                        PasswordTransformationMethod.getInstance()
-                }
-            }
+//        binding.login.setOnClickListener {
+//            when (binding.password.transformationMethod) {
+//                PasswordTransformationMethod.getInstance() -> {
+//                    binding.password.transformationMethod =
+//                        HideReturnsTransformationMethod.getInstance()
+//                }
+//                HideReturnsTransformationMethod.getInstance() -> {
+//                    binding.password.transformationMethod =
+//                        PasswordTransformationMethod.getInstance()
+//                }
+//            }
+//        }
+        binding.newaccount.setOnClickListener {
+            val intent = Intent(this, NewAcountActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }
