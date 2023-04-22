@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.appcompat.widget.AppCompatEditText
-            android:id="@+id/phone_email"
+            android:id="@+id/editText_main_phoneEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -42,8 +42,8 @@
             android:hint="Mật khẩu"
             android:textColor="@color/black"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@id/phone_email"
-            app:layout_constraintTop_toBottomOf="@id/phone_email" />
+            app:layout_constraintStart_toStartOf="@id/editText_main_phoneEmail"
+            app:layout_constraintTop_toBottomOf="@id/editText_main_phoneEmail" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login"
@@ -55,7 +55,7 @@
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:textStyle="bold"
-            android:background="@color/blue"
+            android:background="@color/main_color"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password" />
@@ -90,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="#FFFFFF"
+            android:background="@color/white"
             android:text="Tạo tài khoản Facebook mới"
             android:textColor="@color/blue"
             android:textSize="15sp"
