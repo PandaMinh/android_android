@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
 //                }
 //            }
 //        }
-        binding.newaccount.setOnClickListener {
-            val intent = Intent(this, NewAcountActivity::class.java)
-            startActivity(intent)
-
-        }
+//        binding.newaccount.setOnClickListener {
+//            val intent = Intent(this, NewAcountActivity::class.java)
+//            startActivity(intent)
+//
+//        }
     }
 }
