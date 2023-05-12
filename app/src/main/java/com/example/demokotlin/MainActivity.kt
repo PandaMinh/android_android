@@ -1,9 +1,6 @@
 package com.example.demokotlin
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.method.HideReturnsTransformationMethod
-import android.text.method.PasswordTransformationMethod
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.demokotlin.databinding.ActivityMainBinding
@@ -25,11 +22,6 @@ class MainActivity : AppCompatActivity() {
 //                        PasswordTransformationMethod.getInstance()
 //                }
 //            }
-//        }
-//        binding.newaccount.setOnClickListener {
-//            val intent = Intent(this, NewAcountActivity::class.java)
-//            startActivity(intent)
-//
 //        }
     }
 }

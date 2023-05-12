@@ -61,7 +61,7 @@
             app:layout_constraintTop_toBottomOf="@id/password" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/miss"
+            android:id="@+id/forgot"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quên mật khẩu?"
@@ -81,9 +81,9 @@
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="13sp"
-            app:layout_constraintEnd_toEndOf="@id/miss"
-            app:layout_constraintStart_toStartOf="@id/miss"
-            app:layout_constraintTop_toBottomOf="@id/miss" />
+            app:layout_constraintEnd_toEndOf="@id/forgot"
+            app:layout_constraintStart_toStartOf="@id/forgot"
+            app:layout_constraintTop_toBottomOf="@id/forgot" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/newaccount"
