@@ -6,29 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.demokotlin.databinding.FragmentLoginBinding
-import com.example.demokotlin.databinding.FragmentNewAccountBinding
+import com.example.demokotlin.databinding.FragmentForgotPasswordBinding
 
-class NewAccount_Fragment : Fragment() {
-    private var _binding: FragmentNewAccountBinding? = null
-    private val binding: FragmentNewAccountBinding get() = binding!!
+class ForgotPasswordFragment : Fragment() {
+    private var _binding: FragmentForgotPasswordBinding? = null
+    private val binding: FragmentForgotPasswordBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentNewAccountBinding.inflate(inflater, container, false)
+        _binding = FragmentForgotPasswordBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.buttonNewAccountBack.setOnClickListener {
+        binding.buttonForgotPasswordBack.setOnClickListener {
             findNavController().popBackStack()
-        }
-        binding.buttonNewAccountRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_newAccount_Fragment_to_homeFacebook_Fragment)
         }
     }
 

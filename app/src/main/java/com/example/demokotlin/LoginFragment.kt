@@ -10,7 +10,7 @@ import com.example.demokotlin.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
-    private val binding: FragmentLoginBinding get() = binding!!
+    private val binding: FragmentLoginBinding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
