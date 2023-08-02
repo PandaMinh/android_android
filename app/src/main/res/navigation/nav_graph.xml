@@ -40,8 +40,8 @@
         android:label="fragment_home_facebook_"
         tools:layout="@layout/fragment_home_facebook_" >
         <action
-            android:id="@+id/action_homeFacebook_Fragment_to_newContactFragment"
-            app:destination="@id/newContactFragment" />
+            android:id="@+id/action_homeFacebook_Fragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
     </fragment>
     <fragment
         android:id="@+id/newAccount_Fragment"
@@ -56,15 +56,4 @@
         android:id="@+id/contactFragment"
         android:name="com.example.demokotlin.ContactFragment"
         android:label="ContactFragment" />
-    <fragment
-        android:id="@+id/newContactFragment"
-        android:name="com.example.demokotlin.NewContactFragment"
-        android:label="NewContactFragment" >
-        <action
-            android:id="@+id/action_newContactFragment_to_contactFragment"
-            app:destination="@id/contactFragment" />
-        <action
-            android:id="@+id/action_newContactFragment_to_contactFragment2"
-            app:destination="@id/contactFragment" />
-    </fragment>
 </navigation>

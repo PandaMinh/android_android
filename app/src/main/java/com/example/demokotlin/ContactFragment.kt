@@ -21,12 +21,15 @@ class ContactFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var data = mutableListOf(
-            Contact("0349675811", "Minh")
-        )
-        var name = R.id.editText_NewContact_name
-        var phone = R.id.editText_NewContact_phone
-        data.add(Contact("$phone", "$name"))
+        val data = mutableListOf<Contact>()
+
+        binding.buttonNewContactAdd.setOnClickListener {
+            data.add(Contact(
+                binding.editTextNewContactPhone.text.toString(),
+                binding.editTextNewContactName.text.toString()
+            ))
+            binding.recyclerViewContact.adapter = ContactAdapter(data)
+        }
         binding.recyclerViewContact.apply {
             adapter = ContactAdapter(data)
             layoutManager = LinearLayoutManager(requireContext())

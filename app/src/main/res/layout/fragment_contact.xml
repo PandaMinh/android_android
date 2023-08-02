@@ -6,14 +6,44 @@
 
     </data>
 
-    <FrameLayout
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ContactFragment">
+        tools:context=".ContactFragment"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_newContact_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="30sp"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_newContact_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textSize="30sp"
+            android:inputType="number"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_newContact_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_marginTop="20dp"/>
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_contact"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </FrameLayout>
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </layout>
