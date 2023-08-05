@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.demokotlin.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login_" >
+        <argument
+            android:name="email"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPassword_Fragment"
+            app:destination="@id/forgotPassword_Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFacebook_Fragment"
+            app:destination="@id/homeFacebook_Fragment"
+            app:popUpTo="@id/loginFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_newAccount_Fragment"
+            app:destination="@id/newAccount_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPassword_Fragment"
+        android:name="com.example.demokotlin.ForgotPasswordFragment"
+        android:label="fragment_forgot_password_"
+        tools:layout="@layout/fragment_forgot_password_" >
+        <action
+            android:id="@+id/action_forgotPassword_Fragment_to_homeFacebook_Fragment"
+            app:destination="@id/homeFacebook_Fragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFacebook_Fragment"
+        android:name="com.example.demokotlin.HomeFacebookFragment"
+        android:label="fragment_home_facebook_"
+        tools:layout="@layout/fragment_home_facebook_" >
+        <action
+            android:id="@+id/action_homeFacebook_Fragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAccount_Fragment"
+        android:name="com.example.demokotlin.NewAccountFragment"
+        android:label="NewAccount_Fragment" >
+        <action
+            android:id="@+id/action_newAccount_Fragment_to_homeFacebook_Fragment"
+            app:destination="@id/homeFacebook_Fragment"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.demokotlin.ContactFragment"
+        android:label="ContactFragment" />
+</navigation>
