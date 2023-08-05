@@ -54,6 +54,6 @@
     </fragment>
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.example.demokotlin.ContactFragment"
+        android:name="com.example.demokotlin.student.StudentManagementFragment"
         android:label="ContactFragment" />
 </navigation>
