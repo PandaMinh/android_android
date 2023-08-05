@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.demokotlin.databinding.FragmentStudentManagementBinding
+import java.nio.file.Files.find
 
 
 class StudentManagementFragment : Fragment() {
@@ -16,7 +17,7 @@ class StudentManagementFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-     binding = FragmentStudentManagementBinding.inflate(inflater, container, false)
+        binding = FragmentStudentManagementBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -35,10 +36,11 @@ class StudentManagementFragment : Fragment() {
         }
 
         binding.buttonStudentManagementUpdate.setOnClickListener {
-            data.find { it.msv == binding.editTextStudentManagementMsv.text.toString() } ?.let {
-                it.name = binding.editTextStudentManagementName.text.toString()
-                it.classroom = binding.editTextStudentManagementClass.text.toString()
-            }
+            val index = data.indexOf(data.find { it.msv == binding.editTextStudentManagementMsv.text.toString() })
+            data[index] = data[index].copy(
+                name = binding.editTextStudentManagementName.text.toString(),
+                classroom = binding.editTextStudentManagementClass.text.toString()
+            )
             studentAdapter.submitList(data)
         }
 

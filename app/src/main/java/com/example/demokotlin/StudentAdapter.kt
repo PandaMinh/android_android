@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.demokotlin.databinding.ItemStudentBinding
 
-class StudentAdapter: ListAdapter<Student, StudentAdapter.StudentViewHolder>(StudentDiffUtil()){
+class StudentAdapter: ListAdapter<Student, StudentAdapter.StudentViewHolder>(studentDiffUtil()){
 
     class StudentViewHolder(val binding: ItemStudentBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -23,9 +23,13 @@ class StudentAdapter: ListAdapter<Student, StudentAdapter.StudentViewHolder>(Stu
         holder.binding.textViewItemStudentClassroom.text = getItem(position).classroom
     }
 
-    class StudentDiffUtil(): DiffUtil.ItemCallback<Student>(){
-        override fun areItemsTheSame(oldItem: Student, newItem: Student): Boolean = oldItem.hashCode() == newItem.hashCode()
+    companion object{
+        private fun studentDiffUtil() = object : DiffUtil.ItemCallback<Student>() {
+            override fun areItemsTheSame(oldItem: Student, newItem: Student): Boolean =
+                oldItem.msv == newItem.msv
 
-        override fun areContentsTheSame(oldItem: Student, newItem: Student): Boolean = oldItem == newItem
+            override fun areContentsTheSame(oldItem: Student, newItem: Student): Boolean =
+                oldItem == newItem
+        }
     }
 }

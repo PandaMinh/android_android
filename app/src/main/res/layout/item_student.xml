@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -16,7 +17,7 @@
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#FCEA8B84"
-            android:text="Nguyễn Thị Minh"/>
+            tools:text="Nguyễn Thị Minh"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textView_itemStudent_msv"
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textColor="#FCEA8B84"
-            android:text="B22DCCN540"
+            tools:text="B22DCCN540"
             android:layout_marginTop="10dp"/>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -33,7 +34,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textColor="#FCEA8B84"
-            android:text="D22CQCN12-B"
+            tools:text="D22CQCN12-B"
             android:layout_marginTop="10dp"/>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
