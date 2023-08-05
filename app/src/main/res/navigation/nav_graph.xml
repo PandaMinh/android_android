@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPassword_Fragment"
-        android:name="com.example.demokotlin.ForgotPassword_Fragment"
+        android:name="com.example.demokotlin.ForgotPasswordFragment"
         android:label="fragment_forgot_password_"
         tools:layout="@layout/fragment_forgot_password_" >
         <action
@@ -36,16 +36,24 @@
     </fragment>
     <fragment
         android:id="@+id/homeFacebook_Fragment"
-        android:name="com.example.demokotlin.HomeFacebook_Fragment"
+        android:name="com.example.demokotlin.HomeFacebookFragment"
         android:label="fragment_home_facebook_"
-        tools:layout="@layout/fragment_home_facebook_" />
+        tools:layout="@layout/fragment_home_facebook_" >
+        <action
+            android:id="@+id/action_homeFacebook_Fragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
     <fragment
         android:id="@+id/newAccount_Fragment"
-        android:name="com.example.demokotlin.NewAccount_Fragment"
+        android:name="com.example.demokotlin.NewAccountFragment"
         android:label="NewAccount_Fragment" >
         <action
             android:id="@+id/action_newAccount_Fragment_to_homeFacebook_Fragment"
             app:destination="@id/homeFacebook_Fragment"
             app:popUpTo="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.demokotlin.ContactFragment"
+        android:label="ContactFragment" />
 </navigation>
