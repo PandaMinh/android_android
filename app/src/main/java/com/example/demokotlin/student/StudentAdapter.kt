@@ -1,4 +1,4 @@
-package com.example.demokotlin
+package com.example.demokotlin.student
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

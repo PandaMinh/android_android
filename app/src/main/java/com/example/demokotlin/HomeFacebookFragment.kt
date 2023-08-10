@@ -24,7 +24,7 @@ class HomeFacebookFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.textViewHomeFBNewcontact.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFacebook_Fragment_to_newContactFragment)
+            findNavController().navigate(R.id.action_homeFacebook_Fragment_to_contactFragment)
         }
     }
 }
