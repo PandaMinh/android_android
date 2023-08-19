@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".StudentManagementFragment"
+        tools:context=".student.StudentManagementFragment"
         android:orientation="vertical"
         android:layout_marginHorizontal="20dp">
 
