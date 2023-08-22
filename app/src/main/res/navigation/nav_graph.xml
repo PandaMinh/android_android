@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/gameFragment">
+    app:startDestination="@id/studentManagementFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -67,4 +67,8 @@
             android:id="@+id/action_gameFragment_to_loginFragment2"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/studentManagementFragment"
+        android:name="com.example.demokotlin.student.StudentManagementFragment"
+        android:label="StudentManagementFragment" />
 </navigation>

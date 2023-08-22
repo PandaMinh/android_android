@@ -25,6 +25,9 @@ class StudentManagementFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
         val studentAdapter = StudentAdapter()
 
         binding.buttonStudentManagementAdd.setOnClickListener {
@@ -33,7 +36,6 @@ class StudentManagementFragment : Fragment() {
                 binding.editTextStudentManagementMsv.text.toString(),
                 binding.editTextStudentManagementClass.text.toString()
             )
-            studentAdapter.submitList(viewModel.data)
         }
 
         binding.buttonStudentManagementUpdate.setOnClickListener {
@@ -42,15 +44,12 @@ class StudentManagementFragment : Fragment() {
                 binding.editTextStudentManagementClass.text.toString(),
                 binding.editTextStudentManagementMsv.text.toString()
             )
-            studentAdapter.submitList(viewModel.data)
         }
 
         binding.recyclerViewStudent.apply {
             adapter = studentAdapter
             layoutManager = LinearLayoutManager(requireContext())
         }
-
-        studentAdapter.submitList(viewModel.data)
     }
 
 }
