@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.demokotlin.game.GameViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        android:orientation="vertical"
+        tools:context=".game.GameFragment">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_gameFragment_Watermelon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.team1Name}"
+            android:textColor="#FCEA8B84"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_gameFragment_WatermelonScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#FCEA8B84"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/textView_gameFragment_Watermelon"
+            app:layout_constraintStart_toStartOf="@id/textView_gameFragment_Watermelon"
+            app:layout_constraintTop_toBottomOf="@id/textView_gameFragment_Watermelon"
+            tools:text="@{viewModel.scoreWatermelon.toString()}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_gameFragment_Durian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="@{viewModel.team2Name}"
+            android:textColor="#FCEA8B84"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textView_gameFragment_Watermelon"
+            app:layout_constraintTop_toTopOf="@id/textView_gameFragment_Watermelon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView_gameFragment_DurianScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="#FCEA8B84"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@id/textView_gameFragment_Durian"
+            app:layout_constraintStart_toStartOf="@id/textView_gameFragment_Durian"
+            app:layout_constraintTop_toBottomOf="@id/textView_gameFragment_Durian"
+            tools:text="@{viewModel.scoreDurian.toString()}" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score1_watermelon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:text="+1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/textView_gameFragment_Watermelon"
+            app:layout_constraintStart_toStartOf="@id/textView_gameFragment_Watermelon"
+            app:layout_constraintTop_toBottomOf="@id/textView_gameFragment_WatermelonScore" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score2_watermelon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:text="+2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/button_gameFragment_score1_watermelon"
+            app:layout_constraintStart_toStartOf="@id/button_gameFragment_score1_watermelon"
+            app:layout_constraintTop_toBottomOf="@id/button_gameFragment_score1_watermelon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score3_watermelon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:text="+3"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/button_gameFragment_score2_watermelon"
+            app:layout_constraintStart_toStartOf="@id/button_gameFragment_score2_watermelon"
+            app:layout_constraintTop_toBottomOf="@id/button_gameFragment_score2_watermelon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score1_durian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:text="+1"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/textView_gameFragment_Durian"
+            app:layout_constraintStart_toStartOf="@id/textView_gameFragment_Durian"
+            app:layout_constraintTop_toBottomOf="@id/textView_gameFragment_DurianScore" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score2_durian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:text="+2"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/button_gameFragment_score1_durian"
+            app:layout_constraintStart_toStartOf="@id/button_gameFragment_score1_durian"
+            app:layout_constraintTop_toBottomOf="@id/button_gameFragment_score1_durian" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_score3_durian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:background="#FCEA8B84"
+            android:onClick="@{() -> viewModel.incrementScore(false, 3)}"
+            android:text="+3"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/button_gameFragment_score2_durian"
+            app:layout_constraintStart_toStartOf="@id/button_gameFragment_score2_durian"
+            app:layout_constraintTop_toBottomOf="@id/button_gameFragment_score2_durian" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_gameFragment_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="90dp"
+            android:layout_marginTop="40dp"
+            android:background="#FCEA8B84"
+            android:text="Reset"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_gameFragment_score3_watermelon" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_gameFragment_team1Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="name of team1"
+            android:text="@={viewModel.team1Name}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/editText_gameFragment_team2Name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_gameFragment_reset" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/editText_gameFragment_team2Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="name of team2"
+            android:text="@={viewModel.team2Name}"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/editText_gameFragment_team1Name"
+            app:layout_constraintTop_toBottomOf="@+id/button_gameFragment_reset" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

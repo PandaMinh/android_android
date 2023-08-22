@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/gameFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -56,4 +56,15 @@
         android:id="@+id/contactFragment"
         android:name="com.example.demokotlin.ContactFragment"
         android:label="ContactFragment" />
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.demokotlin.game.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_gameFragment_to_loginFragment2"
+            app:destination="@id/loginFragment" />
+    </fragment>
 </navigation>
