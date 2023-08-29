@@ -6,8 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.demokotlin.data.API
+import com.example.demokotlin.data.LoginRequest
 import com.example.demokotlin.databinding.FragmentLoginBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
@@ -33,7 +40,17 @@ class LoginFragment : Fragment() {
         }
 
         binding.login.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_homeFacebook_Fragment)
+            val email = binding.phoneEmail.text.toString()
+            val password = binding.password.text.toString()
+            val loginRequest = LoginRequest(
+                email = email,
+                password = password
+            )
+            val response = lifecycleScope.async{
+                withContext(Dispatchers.IO){
+                    API.authService.login(loginRequest)
+                }
+            }
         }
 
     }
