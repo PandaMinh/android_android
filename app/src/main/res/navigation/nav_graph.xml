@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.demokotlin.LoginFragment"
+        android:name="com.example.demokotlin.posts.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login_" >
         <argument
